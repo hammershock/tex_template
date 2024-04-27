@@ -1,0 +1,172 @@
+\documentclass[a4paper]{article} 	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}  		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}   		
+\usepackage{graphicx,subcaption}					
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{lineno}
+\usepackage{setspace}
+\usepackage{booktabs,multirow}
+\usepackage{authblk}
+%\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[flushleft]{threeparttable} % For adding footnotes to tables
+
+
+\RequirePackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\D}{\mathcal{MD}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\R}{\texttt{R}}
+\newcommand{\asreml}{\texttt{ASReml-R}}
+\newcommand{\Matern}{Mat\'ern }
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\AR}{\mathrm{AR1}}
+\newcommand{\BigO}[1]{{\rm O}\left(#1\right)}
+\newcommand{\eg}{e.g.\ }
+\newcommand{\ie}{i.e.\ }
+\newcommand{\iid}{\textrm{i.i.d.\ }}
+
+\newcommand{\revision}[1]{\textcolor{red}{#1}}
+
+
+\usepackage[url=false, isbn=false, eprint=false, backref=true, style= authoryear, backend=biber, maxcitenames=2, giveninits=true, maxbibnames=100, uniquename=init]{biblatex}   %% backend=bibtex
+\DeclareNameAlias{sortname}{family-given}
+\addbibresource{REF.bib}
+
+\title{Title of this manuscript}
+%\author{Jerome}
+\author[1]{First Author Name \thanks{Corresponding author: email@example.com}}
+\author[1,2]{Second Author}
+\author[2]{Third Author}
+
+
+
+\affil[1]{Affiliation one}
+\affil[2]{Affiliation two}
+ 
+\date{}							
+% Activate to display a given date or no date
+
+\linenumbers
+\doublespacing
+%\onehalfspacing
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+The abstract would summarise the study's purpose, methods, results, and conclusions, such as how varying temperatures affect enzyme activity in a lab setting.
+\end{abstract}
+
+\section{Introduction}
+The introduction would provide background information on enzyme activity and temperature sensitivity, leading to the hypothesis that temperature changes will affect enzyme activity. 
+
+For citations, normal \textcite{einstein1905, Cressie1999Classes}, and with parentheses \parencite{Abramowitz1974Handbook}.
+
+\section{Methods}
+The methods section would detail how the experiment was conducted, including the enzymes studied, the temperature ranges tested, and the assay methods used to measure enzyme activity.
+
+The Pythagorean theorem can be expressed as:
+\begin{equation}\label{eq:example}
+    a^2 + b^2 = c^2
+\end{equation}
+where $a$ and $b$ are the lengths of the legs of a right triangle, and $c$ is the length of the hypotenuse.
+
+In the above equation \eqref{eq:example}, we learnt something. 
+
+\begin{theorem}\label{th:example}
+This is a theorem.
+\end{theorem}
+
+This is Theorem \ref{th:example}. 
+
+
+
+\section{Results}
+The results section would present the data collected, such as enzyme activity levels at different temperatures, possibly including tables or graphs to illustrate the findings.
+
+
+Refer to Figure \ref{fig:single_figure}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{example-image-a}
+    \caption{Single Figure Caption}
+    \label{fig:single_figure}
+\end{figure}
+
+
+Refer to Figures \ref{fig:subfig_a} and \ref{fig:subfig_b}. 
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-a}
+        \subcaption{Sub-caption for Figure A}
+        \label{fig:subfig_a}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-b}
+        \subcaption{Sub-caption for Figure B}
+        \label{fig:subfig_b}
+    \end{minipage}
+    \caption{Two Figures Side by Side}
+    \label{fig:two_figures}
+\end{figure}
+
+
+
+
+Refer to Table \ref{tab:my_table}. 
+
+\begin{table}[H] %%% put table here "H", or "htbp"
+    \centering
+    \begin{tabular}{ccc}
+        \toprule
+        \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\ \midrule
+        Row 1, Col 1 & Row 1, Col 2 & Row 1, Col 3 \\
+        Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\
+        Row 3, Col 1 & Row 3, Col 2 & Row 3, Col 3 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Your Table Caption Here}
+    \label{tab:my_table}
+\end{table}
+
+
+\section{Discussion}
+The discussion would interpret the results, comparing them to prior research and explaining the implications of the findings for understanding enzyme function and temperature sensitivity.
+
+\section{Conclusion}
+The conclusion would summarise the key findings and their significance, potentially suggesting avenues for future research or practical applications in fields like agriculture or medicine.
+
+\section*{Acknowledgements}
+Acknowledgements might include funding sources, lab assistants, or equipment providers.
+
+
+\appendix
+
+
+
+\renewcommand\bibname{References}% change bibliography title to references
+	%\addcontentsline{toc}{chapter}{Bibliography}
+\addtocontents{toc}{Bibliography}
+\printbibliography
+\end{document}
